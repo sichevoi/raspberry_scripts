@@ -3,8 +3,9 @@ set -x
 while [ 1 ] 
 do
     sudo ifconfig wlan0 down
-    sleep 20
+    sudo macchanger -r wlan0
     sudo ifconfig wlan0 up
+
     sleep 20
     ping -c 10 8.8.8.8
     wget -T 60 -t 3 http://ipv4.download.thinkbroadband.com/200MB.zip -O- -o- -b
