@@ -1,0 +1,1 @@
+export AMSRDK_IP="10.15.33.30"
